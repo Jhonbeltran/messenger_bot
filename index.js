@@ -38,7 +38,7 @@ app.post('/webhook/', function (req, res) {
     let sender = event.sender.id
     if (event.message && event.message.text) {
       let text = event.message.text
-      if (text === 'Generic') {
+      if (text === 'Elefante') {
           sendGenericMessage(sender)
           continue
       }
@@ -83,7 +83,7 @@ function sendGenericMessage(sender) {
                 "elements": [{
                     "title": "First card",
                     "subtitle": "Element #1 of an hscroll",
-                    "image_url": "http://messengerdemo.parseapp.com/img/rift.png",
+                    "image_url": "https://scontent.fbog2-1.fna.fbcdn.net/v/t1.0-1/p160x160/13882363_1082179998483901_6650034128796066076_n.jpg?oh=cb9c28d59f53fad900e228fd93e77fd5&oe=58ED75AD",
                     "buttons": [{
                         "type": "web_url",
                         "url": "https://www.messenger.com",
