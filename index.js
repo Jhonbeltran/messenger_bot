@@ -38,7 +38,7 @@ app.post('/webhook/', function (req, res) {
     let sender = event.sender.id
     if (event.message && event.message.text) {
       let text = event.message.text
-      if (text === 'Elefante') {
+      if (text.indexOf('jhon') != -1) {
           sendGenericMessage(sender)
           continue
       }
