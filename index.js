@@ -38,7 +38,7 @@ app.post('/webhook/', function (req, res) {
     let sender = event.sender.id
     if (event.message && event.message.text) {
       let text = event.message.text
-      if (text.indexOf('git hub') != -1) {
+      if (text.indexOf('github') != -1) {
           sendGenericMessage(sender)
           continue
       }
@@ -81,17 +81,17 @@ function sendGenericMessage(sender) {
             "payload": {
                 "template_type": "generic",
                 "elements": [{
-                    "title": "First card",
-                    "subtitle": "Element #1 of an hscroll",
+                    "title": "Repositorio en Github",
+                    "subtitle": "Jhonbeltran on Github",
                     "image_url": "https://scontent.fbog2-1.fna.fbcdn.net/v/t1.0-1/p160x160/13882363_1082179998483901_6650034128796066076_n.jpg?oh=cb9c28d59f53fad900e228fd93e77fd5&oe=58ED75AD",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "https://www.messenger.com",
+                        "url": "https://github.com/Jhonbeltran",
                         "title": "web url"
                     }, {
                         "type": "postback",
-                        "title": "Postback",
-                        "payload": "Payload for first element in a generic bubble",
+                        "title": "¿Que vas a encontrar?",
+                        "payload": "Todos los repositorios y contribuciones de Jhonbeltran",
                     }],
                 }, {
                     "title": "Second card",
